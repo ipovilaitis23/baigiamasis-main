@@ -1,0 +1,84 @@
+section:nth-of-type(7) {
+    width: 100%;
+    height: 600px;
+    background: $orange 0% 0%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    h2 {
+        font-size: 36px;
+        color: white;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    p {
+        color: white;
+    }
+    .contact-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 450px;
+        height: 350px;
+        background: white;
+        border-radius: 5px;
+        form {
+            display: flex;
+            flex-flow: column wrap;
+            gap: 40px;
+            justify-content: center;
+            align-items: center;
+            padding-top: 50px;
+            width: 70%;
+            input {
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                width: 100%;
+            }
+            .input-buttons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+                input {
+                  appearance: none;
+                  width: 1.13em;
+                  height: 1.13em;
+                  border: 0.15em solid #41D395;
+                  border-radius: 50%;
+                  margin-left: 5px;
+                  display: grid;
+                  place-content: center;
+                }
+                input::before {
+                  content: "";
+                  width: 0.49em;
+                  height: 0.49em;
+                  border-radius: 50%;
+                  transform: scale(0);
+                  transition: 120ms transform ease-in-out;
+                  background-color: #41D395;
+                }
+                input:checked::before {
+                  transform: scale(1);
+                }
+              }
+              button {
+                padding: 20px 15px 20px 15px;
+                border-radius: 5px;
+                background: #41D395;
+                color: white;
+                border: none;
+                width: 160px;
+              }
+              button:hover {
+                cursor: pointer;
+              }
+        }
+    }
+}
