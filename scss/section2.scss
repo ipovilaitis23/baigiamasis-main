@@ -27,6 +27,9 @@
       p {
         padding-bottom: 35px;
       }
+      .tabs .button-container button.active{
+        @include orange;
+      }
         .button-container {
           width: 50%;
           display: flex;
@@ -49,11 +52,17 @@
             transition: 0.3s;
             @include orange;
           }
+          
         }
         .tabs-text {
-          display: flex;
+          display: none;
           flex-flow: column wrap;
           gap: 20px;
+          animation: fadeEffect 1s;
+          @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+          }
         }
       }
       .tabs-images {
